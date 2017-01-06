@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset = "UTF-8">
+<title>Job offer</title>
+<link rel="stylesheet" type="text/css" href="JobOfferStyle.css">
+<script src="offerJS.js"></script>
+</head>
+<body >
+ 
+
+ <div id="pagetop">
+<header>
+ <div class="img-container"></div>
+ </header>
+  <div id="menu">menu system</div>
+</div>
+<div id="wrapper">
+</div>
+ 
+ 
+<div id="wrap">	
+
+		<form id='form'>
+		<table class="jobOffer">
+				<tr>
+				  <td>Job title*</td> <td><input type = "text"	id = "txtTitle"  name="select1" required/></td>  <span id="titleMessage" class="confirmMessage"></span>
+				</tr>	  
+			 
+				<tr>
+				  <td><label>Job category* </label>&nbsp;</td>
+				  <td><select id = "txtCategory" name="select2" size="5" multiple="multiple" tabindex="1">
+					<option value="11">eleven</option>
+					<option value="12">twelve</option>
+					<option value="13">thirette</option>
+					<option value="14">fourteen</option>
+					<option value="15">fifteen</option>
+					<option value="16">sixteen</option>
+					<option value="17">seventeen</option>
+					<option value="18">eighteen</option>
+					<option value="19">nineteen</option>
+					<option value="20">twenty</option>
+				  </select>
+				  </td>
+				</tr>
+							  		
+			  <tr>
+			     <td>Salary:</td>  <td><input type="text" onkeypress="validate(event)" id = "txtSalary" name="select3" /></td> <span id="addressMessage" class="confirmMessage"></span>
+			  </tr>
+			  
+			  <tr>
+			     <td>Description*:</td>  <td><textarea id="description" cols="40" rows="5" name="select4" ></textarea></td> <span id="descriptionMessage" class="confirmMessage"></span>
+			  </tr>
+			  <tr>
+				<td></td><td><input type="button" class="btnstyle"  value = "Submit"	onclick = "Submit()"/></td>
+			  </tr>	
+			  </table>
+			  
+		</form>	
+	</div>	
+	</div>	
+	
+	
+	
+	<footer>
+	<p style="text-align: center; padding 150px ;color: #483D8B; padding: 2% ">&#169;Copyright - Job careers, 2016.</p>
+	</footer>
+	</div>
+	</div>
+
+</body>
+</html>

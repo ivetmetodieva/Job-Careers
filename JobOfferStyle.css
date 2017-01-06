@@ -1,0 +1,423 @@
+#txtDescription{	
+    height:300px;
+	width:350px;
+    font-size:14pt;
+}
+/*
+table.jobOffer {
+
+	
+	margin-top: 200px;
+    margin-left:auto; 
+    margin-right:auto;
+	
+	width:100px;
+	height:100%;
+	background-color:white;
+	height:100vh;
+	width: 50vh;
+  }
+ 
+*/
+ 
+  
+footer{
+position:fixed;
+bottom:0;
+left: 0;
+height: 70px;
+background-color: white;
+width: 100%;
+}
+
+body{
+margin-bottom: 120px;
+margin-top: 120px;
+}
+
+
+header{
+position:fixed;
+top:0;
+left: 0;
+height: 200px;
+background-color: white;
+width: 100%;
+
+}
+
+
+.img-container {
+  min-height: 200px;
+  background-image: url(http://cpo.nbu.bg/wp-content/uploads/2014/10/NBU1.png);
+  background-repeat: no-repeat;
+  background-size: 500px 200px;
+  background-position: center top;
+  /*padding: 40px; (If don't want to set min-height or some image content is there) */
+}
+
+body {
+  background: url(https://teacher.nbu.bg/images/2.jpg); 
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  
+  /* Background image doesn't tile */
+  background-repeat: no-repeat;
+  
+  /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  background-attachment: fixed;
+  
+  /* This is what makes the background image rescale based
+     on the container's size */
+  background-size: cover;
+  
+  /* Set a background color that will be displayed
+     while the background image is loading */
+  background-color: #464646;
+}
+
+/* Set input box style*/
+
+
+
+#wrap{
+    margin-top: 27%;
+    margin-left:auto; 
+    margin-right:auto;
+    max-width: 500px;
+    padding: 10px 20px;
+    background: #f4f7f8;
+   
+    padding: 42px;
+    background: #f4f7f8;
+    border-radius: 8px;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+#wrap fieldset{
+    border: none;
+}
+#wrap legend {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+#wrap label {
+    display: block;
+    margin-bottom: 8px;
+}
+#wrap input[type="text"],
+#wrap input[type="date"],
+#wrap input[type="datetime"],
+#wrap input[type="email"],
+#wrap input[type="number"],
+#wrap input[type="search"],
+#wrap input[type="time"],
+#wrap input[type="url"],
+#wrap textarea,
+#wrap select {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    background: rgba(255,255,255,.1);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 0;
+    outline: 0;
+    padding: 7px;
+    width: 100%;
+    box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    background-color: #e8eeef;
+    color:#8a97a0;
+    -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
+    margin-bottom: 30px;
+    
+}
+#wrap input[type="text"]:focus,
+#wrap input[type="date"]:focus,
+#wrap input[type="datetime"]:focus,
+#wrap input[type="email"]:focus,
+#wrap input[type="number"]:focus,
+#wrap input[type="search"]:focus,
+#wrap input[type="time"]:focus,
+#wrap input[type="url"]:focus,
+#wrap textarea:focus,
+#wrap select:focus{
+    background: #d2d9dd;
+}
+#wrap select{
+    -webkit-appearance: menulist-button;
+    height:95px;
+}
+
+#wrap #description{
+height:300px;
+}
+
+#wrap .number {
+    background: #1abc9c;
+    color: #fff;
+    height: 30px;
+    width: 30px;
+    display: inline-block;
+    font-size: 0.8em;
+    margin-right: 4px;
+    line-height: 30px;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.2);
+    border-radius: 15px 15px 15px 0px;
+}
+
+#wrap input[type="submit"],
+#wrap input[type="button"]
+{
+    position: relative;
+    display: block;
+    padding: 19px 39px 18px 39px;
+    color: #FFF;
+    margin: 0 auto;
+    background: #083f88;
+    font-size: 18px;
+    text-align: center;
+    font-style: normal;
+    width: 100%;
+    border: 1px solid #083f88;
+    border-width: 1px 1px 3px;
+    margin-bottom: 10px;
+}
+#wrap input[type="submit"]:hover,
+#wrap input[type="button"]:hover
+{
+    background: #453951;
+}
+
+
+/* scrolling*/
+#pagetop{
+	position: fixed;
+	top: 150px;
+	left: 25%;
+   
+	width:50%;
+	height: 50px;
+	background: #06C;
+	color: #FFF;
+	font-size: 23px;
+	padding-top: 50px;
+	transition: height 0.3s linear 0s, padding 0.3s linear 0s;
+	overflow:hidden;
+}
+#pagetop > #menu{
+	position: absolute;
+	
+	bottom: 0px;
+	width:100%;
+	background: #004A95;
+	height: 50px;
+	transition: height 0.3s linear 0s;
+}
+#wrapper{ margin-top: 230px; }
+
+
+
+/* Set btn style*/
+/*
+@import "compass/css3";
+
+* { box-sizing: border-box; }
+html, body {
+  width: 100%; height: 100%;
+  position: relative;
+  margin: 0; padding: 0;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px; line-height: 22px;
+  background-color: #F2E1AC;
+}
+
+.btnstyle {
+  -webkit-appearance: none;
+  cursor: pointer; outline: none; border: none;
+  position: relative; top: 50%;
+  display: block; min-width: 10%;
+  line-height: 55px; font-size: 14px;
+  text-transform: uppercase;
+  margin: 0 auto; padding: 0 10px;
+  background-color: #F2594B;
+  color: #FFF;
+  border-radius: 3px;
+  @include transform(translateY(-50%));
+  &:hover {
+    background-color: lighten(#F2594B, 5%);
+  }
+}
+
+// completely redoing the modal from the ground up.
+.modal-overlay {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 40;
+
+    @include transition(opacity .25s ease 0s, visibility linear .35s);
+    &.state-show {
+        opacity: .7;
+        visibility: visible;
+        @include transition-delay(0s);
+        @include transition-duration(.2s, 0s);
+    }
+}
+
+.modal-frame {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    z-index: 50;
+
+/*     display: table; */
+    @include display-flex;
+    @include align-items(center);
+    -moz-box-align: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -moz-box-pack: center;
+    -ms-flex-pack: center;
+    
+    width: 100%;
+    text-align: center;
+    visibility: hidden;
+
+    // animation classes and behavior
+    &.state-appear {
+        visibility: visible;
+        .modal-inset {
+            @include animation(modalComeIn .25s ease);
+            visibility: visible; /* to keep @ final state */
+        }
+        .modal-body {
+            opacity: 1;
+            @include transform(translateY(0) scale(1,1))
+        }
+    }
+    &.state-leave {
+        visibility: visible;
+        .modal-inset {
+            @include animation(modalHeadOut .35s ease .1s);
+            visibility: visible;
+        }
+        .modal-body {
+            opacity: 0;
+            @include transition-delay(0s);
+            @include transition-duration(.35s);
+            @include transition-timing-function(ease);
+            @include transform(translateY(25px))
+        }
+    }
+}
+@-moz-document url-prefix() {
+    .modal-frame {
+        height: calc(100% - 55px);
+    }
+}
+
+.modal {
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+}
+    .modal-inset {
+        position: relative;
+        padding: 60px;
+        background-color: white;
+        min-width: 320px;
+        min-height: 126px;
+        margin: auto;
+        visibility: hidden;
+        @include box-shadow(2px 2px 8px 1px rgba(0,0,0,.2));
+        @include backface-visibility(hidden); // helps render animation
+        @include transform(translate3d(0,0,0)); // helps render animation
+        @include transform-style(preserve-3d); // helps render animation
+        .close {
+            display: block;
+            cursor: pointer;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 10px;
+            opacity: .4;
+            &:hover {
+              opacity: 1;
+            }
+        }
+    }
+        .modal-body {
+            margin: auto;
+            opacity: 0;
+            @include transform(translateY(0) scale(.8, .8));
+            @include transition-property(opacity, transform);
+            @include transition-duration(.25s);
+            @include transition-delay(.1s);
+            h3 {
+              font-weight: 700;
+              padding-bottom: 22px;
+              display: block;
+              color: #F2594B;
+              text-align: center;
+            }
+            p {
+              padding-bottom: 20px;
+            }
+            .ps {
+              font-size: 12px;
+              opacity: .3;
+            }
+        }
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content;
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	}
+	@keyframes #{$name} {
+		@content;
+	}
+}
+
+@include keyframes(modalComeIn) {
+    0% {
+        visibility: hidden;
+        opacity: 0;
+        @include transform(scale(.8, .8));
+    }
+    65.5% {
+        @include transform(scale(1.03, 1.03));
+    }
+    100% {
+        visibility: visible;
+        opacity: 1;
+        @include transform(scale(1, 1));
+    }
+}
+
+@include keyframes(modalHeadOut) {
+    0% {
+        visibility: visible;
+        opacity: 1;
+        @include transform(translateY(0) scale(1, 1));
+    }
+    100% {
+        visibility: hidden;
+        opacity: 0;
+        @include transform(translateY(35px) scale(.97, .97));
+    }
+}
+
+*/
+
