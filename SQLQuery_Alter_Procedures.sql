@@ -212,18 +212,19 @@ DROP TABLE AdvertisementM;
 
 CREATE TABLE AdvertisementM(
 advTitle NVARCHAR(40) NOT NULL,
-advSector NVARCHAR(20) NOT NULL,
-advPosition NVARCHAR(40) NOT NULL,
-advTown NVARCHAR(20) NOT NULL,
+advSalary NVARCHAR(5),
+advPosition NVARCHAR(40),
+advTown NVARCHAR(20),
 advert NVARCHAR (4000) NOT NULL,
-advBusyness NVARCHAR(20) NOT NULL,
+advBusyness NVARCHAR(20),
 advLevel NVARCHAR(20) NOT NULL,
-email NVARCHAR(40) NOT NULL
+email NVARCHAR(40),
+IsApproved NVARCHAR (3) NOT NULL,
 );
 
 INSERT INTO AdvertisementM
-VALUES ('Senior C# Developer', 'IT', 'Developer C#', 'Sofia', 'Long advertisement description', 'Full Time', 'Senior', 'test@mail.bg'),
-       ('Senior C# Developer', 'IT', 'Developer C++', 'Sofia', 'This is advertisement description', 'Full Time', 'Junior', 'test@mail.bg')
+VALUES ('Senior C# Developer', '3000', 'Developer C#', 'Sofia', 'Long advertisement description', 'Full Time', 'Senior', 'test@mail.bg', 'yes'),
+       ('Senior C# Developer', '2500', 'Developer C++', 'Sofia', 'This is advertisement description', 'Full Time', 'Junior', 'test@mail.bg', 'no')
 GO
 
 SELECT * 
@@ -301,6 +302,16 @@ GROUP BY email, advert
 GO
 SELECT *
 FROM CheckList
+GO
+
+ALTER VIEW CheckIsApproved
+AS
+SELECT email, advert, IsApproved
+FROM dbo.AdvertisementM
+WHERE IsApproved = 'yes'
+GROUP BY email, advert, IsApproved
+GO
+SELECT * FROM CheckIsApproved
 GO
 
 
