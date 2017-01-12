@@ -152,7 +152,7 @@ GO
 EXEC dbo.AddTicket 'test@mail.bg', 'advertisemet 4000 signs'
 SELECT * FROM Employer
 GO
-
+-------------------------------------------------
 CREATE PROCEDURE UpdateAdert
 @email NVARCHAR(20),
 @advert NVARCHAR(4000)
@@ -196,7 +196,7 @@ GO
 --SELECT * FROM Administrator
 --GO
 
-
+------------------------------------------
 
 CREATE VIEW CheckList 
 AS
@@ -208,16 +208,17 @@ SELECT * FROM CheckList
 GO
 
 
-ALTER VIEW CheckList
+CREATE VIEW CheckIsApproved
 AS
-SELECT email, advert 
+SELECT email, advert, IsApproved
 FROM dbo.AdvertisementM
-GROUP BY email, advert
+WHERE IsApproved = 'yes'
+GROUP BY email, advert, IsApproved
 GO
-SELECT * FROM CheckList
+SELECT * FROM CheckIsApproved
 GO
 
-
+----------------------------------------------
 CREATE PROCEDURE DeleteAdvert
 @email NVARCHAR(20),
 @advPosition NVARCHAR(40)
