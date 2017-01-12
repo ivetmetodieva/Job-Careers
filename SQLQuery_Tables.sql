@@ -17,13 +17,14 @@ History NVARCHAR(300),
 
 CREATE TABLE AdvertisementM(
 advTitle NVARCHAR(40) NOT NULL,
-advSector NVARCHAR(20) NOT NULL,
-advPosition NVARCHAR(40) NOT NULL,
-advTown NVARCHAR(20) NOT NULL,
+advSalary NVARCHAR(5),
+advPosition NVARCHAR(40),
+advTown NVARCHAR(20),
 advert NVARCHAR (4000) NOT NULL,
-advBusyness NVARCHAR(20) NOT NULL,
+advBusyness NVARCHAR(20),
 advLevel NVARCHAR(20) NOT NULL,
-email NVARCHAR(40) NOT NULL
+email NVARCHAR(40),
+IsApproved NVARCHAR (3) NOT NULL,
 );
 
 CREATE TABLE Administrator(
