@@ -1,0 +1,134 @@
+<?php
+session_start();
+
+
+if(isset($_POST['search']))
+{
+    $valueToSearch = $_POST['valueToSearch'];
+    $query = "SELECT * FROM `AdvertisementM` WHERE `advSector` = '%".$valueToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+ else {
+    $query = "SELECT * FROM `AdvertisementM`";
+    $search_result = filterTable($query);
+}
+
+if(isset($_POST['search']))
+{
+    $firmToSearch = $_POST['firm'];
+    $query = "SELECT * FROM `AdvertisementM` WHERE `advTitle` LIKE '%".$firmToSearch."%'";
+    $search_result = filterTable($query);
+    
+}
+ else {
+    $query = "SELECT * FROM `AdvertisementM`";
+    $search_result = filterTable($query);
+}
+
+// connect
+function filterTable($query)
+{
+    $connect = mysqli_connect("JobsBG", "0000", "code123");
+    $filter_Result = mysqli_query($connect, $query);
+    return $filter_Result;
+}
+
+?>
+
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+	<link rel="stylesheet" type="text/css" href="JobOfferStyle.css">     
+	<script src="offerJS.js"></script>
+    </head>
+    <body>
+        
+		<div id="pagetop">
+<header>
+ <div class="img-container"></div>
+ </header>
+  <div id="menu">menu system</div>
+</div>
+<div id="wrapper">
+</div>
+ 
+ 
+<div id="wrap">	
+
+		
+		<table class="jobOffer">
+				  
+    
+            
+            Search by firm name<br><br>
+			<input type="text" name="firm" id="firmName" /> Search by job category<br><br>
+			<select id = "txtCategory" name="valueToSearch" size="5" multiple="multiple" tabindex="1">
+					<option value="Automobile">Automotive</option>
+					<option value="Banking">Banking</option>
+					<option value="Design">Design</option>
+					<option value="IT">IT</option>
+					<option value="Administration">Administration</option>
+					<option value="Science">Science</option>
+					<option value="Real estate">Real estate</option>
+					<option value="Education">Education</option>
+					<option value="Security">Security</option>
+					<option value="Law">Law</option>
+					<option value="Advertisement">Advertisement</option>
+					<option value="Travel agency">Travel agency</option>
+					<option value="Drivers, Couriers">Drivers, Couriers</option>
+					<option value="Hotels">Hotels</option>
+					<option value="Architecture, Construction">Architecture, Construction</option>
+					<option value="Engineers">Engineers</option>
+				  </select>
+			
+			
+			<input type="submit" name="search" value="Filter"><br><br>
+			
+			
+			
+			
+            <table>
+                <tr>
+                    <th>Job title</th>
+                    <th>Sector</th>
+                    <th>Position</th>
+                </tr>
+
+                <?php while($row = mysqli_fetch_array($search_result)):?>
+				
+                <tr>
+                    <td><?php echo $row['advTitle'];?></td>
+                    <td><?php echo $row['advSector'];?></td>
+                    <td><?php echo $row['advPosition'];?></td>
+					<td><form action="showOffer.php" method="GET"> 
+					<?php  $_SESSION['title'] = $row['advTitle']; $_SESSION['sector'] = $row['advSector']; $_SESSION['position'] = $row['advPosition'];?> 
+					<input type="submit" value ="Apply for position"/></form> </td>	
+                </tr>	
+					
+                <?php endwhile;?>
+            </table>
+			
+        
+			  </table>
+			  
+		
+	</div>	
+	</div>	
+	
+	
+	<footer>
+	<p style="text-align: center; padding 150px ;color: #483D8B; padding: 2% ">&#169;Copyright - Job careers, 2016.</p>
+	</footer>
+	</div>
+	</div>
+		
+		
+		
+
+      
+        
+    </body>
+</html>
